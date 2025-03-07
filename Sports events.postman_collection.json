@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "cf51ebbb-fb38-4ea2-af44-4a5ff50f0e1a",
+		"name": "Sports events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30737694"
+	},
+	"item": [
+		{
+			"name": "Delete event",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/delete-event/4",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"delete-event",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Concours équitation\",\r\n    \"description\" : \"\",\r\n    \"date\" : \"2025-02-15\",\r\n    \"location\" : \"Somewhere\",\r\n    \"max\" : null,\r\n    \"user_id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/event",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get upcomming events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register to event",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
